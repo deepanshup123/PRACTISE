@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong Number</title>
+</head>
+<body>
+    <label for="input">Input: </label>
+    <input type="number" id="input" name="User_Input">
+    <button type="submit" id="button">Get</button>
+    <p id="result"></p>
+
+    <script>
+        let button = document.getElementById('button');
+        button.addEventListener("click", function(){
+            let user_input = document.getElementById("input").value;
+            let dup = user_input;
+            let sum = 0;
+            let digit;
+            let count = 0;
+            while (dup > 1) {
+                dup = dup/10;
+                count++;
+            }
+            dup = user_input;
+            while (dup > 0) {
+                let mul = 1;
+                digit = Math.floor(dup) % 10;
+                
+                for (let i = 0; i < count; i++) {
+                    mul = mul * digit;
+                }
+
+                sum = sum + mul;
+                dup = dup/10;
+            }
+            
+            if (user_input == sum) {
+                let text = document.getElementById('result');
+                text.innerHTML = `${user_input} is a Armstrong Number`;
+            }else{
+                let text = document.getElementById('result');
+                text.innerHTML = `${user_input} is not a Armstrong Number`;
+            }
+        })
+
+    </script>
+</body>
+</html>

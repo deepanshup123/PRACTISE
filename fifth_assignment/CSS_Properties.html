@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Land of Boxes</title>
+    <style>
+        #company_name{
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        table{
+            width:100%;
+        }
+
+        table, tr, th, td{
+            border:1px solid black;
+        }
+
+        h2{
+            text-align: center;
+        }
+
+        td{
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="company_name">Land of Boxes</h1>
+    <table>
+        <tr>
+            <th>
+                Product
+            </th>
+            <th>
+                Cost
+            </th>
+        </tr>
+        <tr>
+            <td>EconoBox</td>
+            <td>R5</td>
+        </tr>
+        <tr>
+            <td>Standard Box</td>
+            <td>R10</td>
+        </tr>
+        <tr>
+            <td>Premium Box</td>
+            <td>R15</td>
+        </tr>
+        <tr>
+            <td>Deluxe Box</td>
+            <td>R20</td>
+        </tr>
+        <tr>
+            <td>Super Deluxe Box</td>
+            <td>R30</td>
+        </tr>
+    </table>
+
+    <form>
+        <h2>Details Of Purchaser</h2>
+        <table>
+            <tr>
+                <td>
+                    <label for="name">Name: </label>
+                </td>
+                <td>
+                    <input type="text" id="name" placeholder="Enter Your Name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="address">Address: </label>
+                </td>
+                <td>
+                    <textarea name="Address" id="address" cols="30" rows="5" placeholder="Address...."></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="number">Mobile No.: </label>
+                </td>
+                <td>
+                    <input type="number" id="number" placeholder="1234567890">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="email">Email: </label>
+                </td>
+                <td>
+                    <input type="text" id="email" placeholder="example@gmail.com">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <h2>Product Details</h2>
+    <table>
+        <tr>
+            <th>Product Number</th>
+            <th>Product Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>P101</td>
+            <td>EconoBox</td>
+            <td>10</td>
+            <td>R50</td>
+        </tr>
+        <tr>
+            <td>P102</td>
+            <td>Standard Box</td>
+            <td>8</td>
+            <td>R80</td>
+        </tr>
+        <tr>
+            <td>P103</td>
+            <td>Premium Box</td>
+            <td>14</td>
+            <td>R210</td>
+        </tr>
+        <tr>
+            <td>P105</td>
+            <td>Deluxe Box</td>
+            <td>5</td>
+            <td>R100</td>
+        </tr>
+    </table>
+    <form>
+        <h2>Payment Method</h2>
+        <table>
+            <tr>
+                <td>
+                    <label for="card_type">Credit Card Type</label>
+                </td>
+                <td>
+                    <input type="radio" name="Card" id="credit_card">
+                    <label for="credit_card">Credit Card</label>
+                    <input type="radio" name="Card" id="debit_card">
+                    <label for="debit_card">Debit Card</label>
+                    <input type="radio" name="Card" id="atm_card">
+                    <label for="atm_card">ATM Card</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="card_number">Card Number</label>
+                </td>
+                <td>
+                    <input type="number" name="card_number" id="card_number" placeholder="1234 1234 1234 1234">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Expiry_Date">
+                        Expiry Date
+                    </label>
+                </td>
+                <td>
+                    <input type="date" name="Expiry_Date" id="Expiry_Date">
+                </td>
+            </tr>
+        </table>
+        <h2>Billing Address & Delivery Address</h2>
+        <table>
+            <tr>
+                <td>
+                    <label for="Billing_address">
+                        Billing Address
+                    </label>
+                </td>
+                <td>
+                    <textarea name="Billing_address" id="Billing_address" cols="30" rows="8"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Delivery_Address">
+                        Delivery Address
+                    </label>
+                </td>
+                <td>
+                    <textarea name="Delivery_Address" id="Delivery_Address" cols="30" rows="8"></textarea>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

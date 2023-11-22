@@ -1,0 +1,43 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="age">Enter your Age: </label>
+    <input type="number" id="age" name="age">
+    <br>
+    <label for="nationality">nationality</label>
+    <select name="nationality" id="nationality">
+        <option value="indian">Indian</option>
+        <option value="other">Other</option>
+    </select>
+    <button id="result" type="submit">Check Eligibility</button>
+
+    <p id="result_store"></p>
+
+    <script>
+
+        let result = document.getElementById('result');
+        result.addEventListener('click', function(){
+            let age = document.getElementById('age').value;
+            let select = document.getElementById('nationality').value;
+            
+            if (age >= 18) {
+                let result_store = document.getElementById('result_store');
+                if (select == 'indian') {
+                    result_store.innerHTML=`You are Eligible for Vote`;                    
+                }else{
+                    result_store.innerHTML = `you should to be a indian`;
+                }
+
+            }else{
+                let result_store = document.getElementById('result_store');
+                result_store.innerHTML = `${age} is not a age to Vote wait for age 18`;
+            }
+        })
+    </script>
+</body>
+</html>

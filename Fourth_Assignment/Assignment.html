@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="input">INPUT: </label>
+    <input id="input" type="number" name="input">
+    <button type="submit" id ="submit"> Factorial</button>
+    <br>
+    <label for="result">FACTORIAL: </label>
+    <input id="result" type="number" name="result" readonly>
+    <script>
+        let submit = document.getElementById("submit");
+        submit.addEventListener("click", function (){
+            let user_input = document.getElementById("input").value;
+            let num = user_input;
+            let mul = 1;
+            for(let i=1; i< user_input; i++){
+                mul = mul * num;
+                num = num - 1;
+            };
+            let result = document.getElementById("result");
+            result.value = mul;
+        })
+  </script>
+
+</body>
+</html>
